@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    src: url('../fonts/HelveticaNeue-Light.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Bold';
+    src: url('../fonts/HelveticaNeue-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.news {
+    font-family: 'Helvetica Neue Light', sans-serif;
+    font-size: 40px;
+    margin-top: 100px;
+    padding: 0vh 6vw;
+    min-width: 320px;
+}
+
+.news-title,
+.footer-links {
+    font-family: 'Helvetica Neue Light', sans-serif;
+}
+
+.news-title span {
+    color: #9c9c9c;
+}
+
+.news-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    row-gap: 50px;
+}
+
+.news-card-image {
+    width: 100%;  
+    height: auto; 
+    overflow: hidden;
+}
+
+.news-card-image img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+}
+
+.news-card-data {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.news-card-title {
+    font-size: 34px;
+    padding: 10px 0px;
+    margin: 0;
+}
+
+.news-card-desc {
+    font-size: 25px;
+    color: #707070;
+    padding: 0;
+    margin: 0;
+}
+
+/* Адаптив */
+
+@media (max-width: 1100px) {
+    .news-card-data {
+        font-size: 16px;
+    }
+
+    .news-card-title {
+        font-size: 24px;
+    }
+    .news-card-desc {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .news-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .news-card-data {
+        font-size: 14px;
+    }
+
+    .news-card-title {
+        font-size: 20px;
+    }
+
+    .news-card-desc {
+        font-size: 16px;
+    }
+}
