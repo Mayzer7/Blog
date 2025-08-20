@@ -34,10 +34,12 @@
 .news-title,
 .footer-links {
     font-family: 'Helvetica Neue Light', sans-serif;
+    letter-spacing: normal;
 }
 
 .news-title span {
     color: #9c9c9c;
+    letter-spacing: normal;
 }
 
 .news-cards {
