@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const images = document.querySelectorAll('.fade-in');
+  const elements = document.querySelectorAll('.fade-in');
 
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -10,5 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1 });
 
-  images.forEach(img => observer.observe(img));
+  elements.forEach(el => observer.observe(el));
 });
