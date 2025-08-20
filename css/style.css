@@ -67,7 +67,7 @@
 
 .news-card-title {
     font-size: 34px;
-    padding: 10px 0px;
+    padding: 20px 0px;
     margin: 0;
 }
 
@@ -96,6 +96,10 @@
 @media (max-width: 700px) {
     .news-cards {
         grid-template-columns: 1fr;
+    }
+
+    .news-card-title {
+        padding: 15px 0px;
     }
 }
 
