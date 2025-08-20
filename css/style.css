@@ -28,6 +28,7 @@
     margin-top: 100px;
     padding: 0vh 6vw;
     min-width: 320px;
+    letter-spacing: normal;
 }
 
 .news-title,
@@ -63,12 +64,14 @@
     padding: 0;
     margin: 0;
     padding-top: 10px;
+    letter-spacing: normal;
 }
 
 .news-card-title {
     font-size: 34px;
     padding: 20px 0px;
     margin: 0;
+    letter-spacing: normal;
 }
 
 .news-card-desc {
@@ -76,6 +79,7 @@
     color: #707070;
     padding: 0;
     margin: 0;
+    letter-spacing: normal;
 }
 
 /* Адаптив */
