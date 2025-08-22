@@ -35,9 +35,46 @@
 }
 
 .news-title,
-.footer-links {
+.footer-links,
+.footer-copyright {
     font-family: 'Helvetica Neue Light', sans-serif;
     letter-spacing: normal;
+}
+
+.footer-copyright {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.footer-copyright a {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    white-space: nowrap;
+    line-height: 1; 
+    display: inline-block; 
+    padding-bottom: 2px;
+}
+
+.footer-copyright a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; 
+    width: 100%;
+    height: 1px;
+    background-color: #000; /* цвет линии */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-copyright a:hover::after {
+    transform: scaleX(1);
 }
 
 .news-title span {
@@ -112,6 +149,12 @@
     }
 }
 
+@media (max-width: 600px) {
+    .footer-copyright a {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 500px) {
     .news-card-data {
         font-size: 14px;
@@ -123,6 +166,12 @@
 
     .news-card-desc {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-copyright a {
+        font-size: 14px;
     }
 }
 
@@ -260,3 +309,177 @@
     font-weight: 600 !important;
     text-transform: uppercase;
 }
+
+
+
+
+
+/* Cookie banner */
+
+.cookie-banner-wrapper {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.cookie-container {
+    padding: 0px 80px 0px 80px;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.cookie-banner {
+    pointer-events: auto;
+    max-width: 533px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #707070;
+
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 24px 40px;
+}
+
+.cookie-banner.hidden {
+    display: none;
+}
+
+.cookie-title {
+    font-family: 'Helvetica Neue Bold', sans-serif;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+}
+
+.cookie-text {
+    font-family: 'Helvetica Neue Light', sans-serif;
+    font-size: 18px;
+    line-height: 110%;
+}
+
+.cookie-text span {
+    color: #707070;
+    text-decoration: underline;
+}
+
+.cookie-text span a {
+    transition: all 0.3s ease;
+}
+
+.cookie-text span a:hover {
+    color: #707070;
+}
+
+.cookie-banner-btn {
+    background-color: #111;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Helvetica Neue Medium', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 19px 0px;
+    transition: opacity 0.3s ease;
+}
+
+.cookie-banner-btn:hover {
+    opacity: 0.8;
+}
+
+/* Подсветка пункта Cookie */
+
+.highlighted {
+  color: #707070;    
+  transition: color 0.5s ease;
+}
+
+#cookies {
+  scroll-margin-top: 200px; 
+}
+
+/* Адаптив Cookie banner */
+
+@media (max-width: 1600px) {
+    .cookie-container {
+        padding: 0px 40px 0px 40px;
+    }
+
+    .cookie-banner {
+        left: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cookie-banner {
+        padding: 10px 16px 20px 16px;
+        max-width: 375px;
+    }
+
+    .cookie-title {
+        font-size: 22px;
+    }
+
+    .cookie-text {
+        font-size: 14px;
+    }
+
+    .cookie-banner-btn {
+        padding: 16px 0px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .cookie-container {
+        padding: 0px 16px 0px 16px;
+    }
+
+    .cookie-banner {
+        left: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cookie-banner-wrapper {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0;              
+        pointer-events: none;    
+    }
+
+    .cookie-container {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cookie-banner {
+        box-sizing: border-box;            
+        width: 100%;
+        max-width: 100%;
+        margin: 0;                       
+        border-radius: 0;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        padding: 16px;                      
+        display: flex;
+        flex-direction: column;             
+        gap: 12px;                          
+        pointer-events: auto;
+    }
+
+
+
+ 
+}
+
